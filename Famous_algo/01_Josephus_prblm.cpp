@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// Time Complexity: O(n)
 int josephus(int n, int k)
 {
   if (n == 1)
