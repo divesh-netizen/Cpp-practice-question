@@ -33,6 +33,20 @@ void print_LL(Node* temp){
     }
 }
 
+// new method to reverse the LL
+Node* reverse(Node* head){
+        Node* next = NULL;
+        Node* prev = NULL;
+        Node* cur = head;
+        while(cur!=NULL){
+            next = cur->next;
+            cur->next = prev;
+            prev = cur;
+            cur = next;
+        }
+        return prev;
+    }
+
 void reverse_LL(Node** head){
     stack<Node*> s;
     Node* temp = *head;
